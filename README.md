@@ -321,38 +321,36 @@ Pada soal ini, fungsi `swap` menggunakan metode passing _pass by value_ sehingga
 #include<bits/stdc++.h>
 using namespace std;
 
-class Shape{ //Membuat base-class (kelas dasar) bernama "Shape"
-    public: //Mengatur agar dapat diakses secara keseluruhan (terbuka)
-    int width, height; //Mendeklarasikan variabel width dan height
-    void numbers(int x, int y) { 
-    //Menggunakan int x dan int y di dalam "(" dan ")" agar nilai sisi bangunan (x dan y) dapat dideklarasikan di fungsi main
-        width=x; //mengubah nilai variabel "width" menjadi sama dengan nilai "x"
-        height=y; ////mengubah nilai variabel "height" menjadi sama dengan "y"
-    }
-};
-
-class Rectangle: public Shape{ //Membuat sub-kelas "Rectangle" dari "kelas Shape"
+class Shape{ 
     public: 
-    float area () { //Menghitung luas segi empat di dalam fungsi "area"
-        return width*height; //Mengembalikan nilai dari luas segi empat
+    int width, height; 
+    void numbers(int x, int y) { 
+        width=x; 
+        height=y; 
+    }
+};
+
+class Rectangle: public Shape{ 
+    public: 
+    float area () {
+        return width*height; 
     }
 
 };
 
-class Triangle: public Shape { //Membuat sub-kelas "Rectangle" dari "kelas Shape"
+class Triangle: public Shape { 
     public:
-    float area () { //Menghitung luas segitiga di dalam fungsi "area"
-        return width*height/2; //Mengembalikan nilai dari luas segitiga
+    float area () {
+        return width*height/2; 
     }
 };
 
 int main (){
-    Rectangle kotak; //Pendeklarasian kelas "Rectangle" dan objek "Kotak"
-    Triangle segitiga; //Pendeklarasian kelas "Triangle" dan objek "segitiga"
-    kotak.numbers (10, 5); //Mendeklarasi nilai (int x, int y) di kelas Shape setara dengan (10,5) untuk segi empat
-    segitiga.numbers (9, 4); //Mendeklarasi nilai (int x, int y) di kelas Shape setara dengan (9,4) untuk segitiga
+    Rectangle kotak; 
+    Triangle segitiga;
+    kotak.numbers (10, 5); 
+    segitiga.numbers (9, 4); 
     cout << kotak.area() << "\n" <<  segitiga.area();
-    //Mencetak hasil akhir (luas) dari kedua bangunan dengan didahului oleh luas segi empat dilanjutkan dengan luas segitiga 
     return 0;
 
 }
@@ -364,24 +362,24 @@ int main (){
 ```
 ## Soal 2
 ```
-#include<bits/stdc++.h>
+include<bits/stdc++.h>
 using namespace std;
 
-class Mother{ //Membuat base-class (kelas dasar) bernama "Shape"
- public: //Mengatur agar dapat diakses secara keseluruhan (terbuka)
- void display () //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
- {cout << "Mom! /n";} //Berisi perintah untuk mencetak kalimat yang ada di dalam tanda petik (" ")
+class Mother{ 
+ public: 
+ void display () 
+ {cout << "Mom! /n";} 
 };
 
-class Daughter: public Mother { ////Membuat sub-kelas "Daughter" dari "kelas Mother"
+class Daughter: public Mother { 
     public:
-    void display () //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
-    {cout << "Daughter! \n";} //Berisi perintah untuk mencetak kalimat yang ada di dalam tanda petik (" ")
+    void display () 
+    {cout << "Daughter! \n";}
 };
 
 int main (){
-    Daughter x; //Mendeklarasikan kelas (Daughter) dan objek dari kelas (x)
-    x.display(); //Menjalankan perintah dari kelas "Daughter" yang berada dalam "void display()"
+    Daughter x; 
+    x.display(); 
     return 0;
 }
 ```
@@ -395,48 +393,48 @@ Daughter!
 #include<bits/stdc++.h>
 using namespace std;
 
-class Animal { //Membuat base-class (kelas dasar) bernama "Animal"
-    public://Mengatur agar dapat diakses secara keseluruhan (terbuka)
-    int age; //Mendeklarasikan variabel tipe integer
-    string name, origin, movement; //Mendeklarasikan variabel-variabel tipe string
+class Animal { 
+    public:
+    int age; 
+    string name, origin, movement; 
     void set_value(string x, int y, string z, string aa){ 
-    //Menggunakan variabel-variabel di dalam "(" dan ")" agar nilai variabel (x,y, z, dan aa) dapat dideklarasikan di fungsi main
-        name = x; //mengubah nilai variabel "name" menjadi sama dengan "x"
-        age = y; //mengubah nilai variabel "age" menjadi sama dengan "y"
-        origin =z; //mengubah nilai variabel "origin" menjadi sama dengan "z"
-        movement=aa; //mengubah nilai variabel "movement" menjadi sama dengan "aa"
+        name = x; 
+        age = y; 
+        origin =z; 
+        movement=aa; 
     }
 };
 
-class Zebra: public Animal { //Membuat sub-kelas "Zebra" dari "kelas Animal"
+class Zebra: public Animal { 
     public:
-    void zeb(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+    void zeb(){ 
         cout << name << " the zebra is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
     }
-    //Mencetak kalimat dan variabel di kanan perintah "cout"
+    
 };
 
-class Dolphin: public Animal { //Membuat sub-kelas "Dolphin" dari "kelas Animal"
+class Dolphin: public Animal { 
     public:
-    void dolphin(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+    void dolphin(){ 
         cout << name << " the dolphin is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
     }
-    //Mencetak kalimat dan variabel di kanan perintah "cout"
+   
 };
 
 int main (){
-    string na1 = "Lala", na2 = "Lili"; //Mendeklarasikan data dengan tipe string untuk nama dari hewan
-    string or1 = "Africa", or2 = "worldwide";  //Mendeklarasikan data dengan tipe string untuk asal hewan (native)
-    string m1 = "walking", m2 = "swimming"; //Mendeklarasikan data dengan tipe string untuk menerangkan cara hewan bergerak
-    Zebra a; //Pendeklarasian kelas "Zebra" dengan objek "a"
-    Dolphin b; //Pendeklarasian kelas "Dolphin" dengan objek "b"
-    a.set_value(na1, 20, or1, m1); 
-    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na1, 20, or1, m1) untuk zebra
-    b.set_value(na2, 30, or2, m2);
-    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na2, 30, or2, m2) untuk lumba-lumba
-    a.zeb(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void zeb()"
+    string na1 , na2; 
+    string or1 , or2 ;  
+    string m1 , m2 ; 
+    int o1,o2; 
+    cin >> na1 >> o1 >> or1 >> m1; 
+    cin >> na2 >> o2 >> or2 >> m2; 
+    Zebra a; 
+    Dolphin b; 
+    a.set_value(na1, o1, or1, m1); 
+    b.set_value(na2, o2, or2, m2);
+    a.zeb(); 
     cout << "\n";
-    b.dolphin(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void dolphin()"
+    b.dolphin(); 
     return 0;
 }
 ```
@@ -454,54 +452,47 @@ Lili the dolphin is 30 years old, from worldwide. It moves by swimming
 #include<bits/stdc++.h>
 using namespace std;
 
-class Animal { //Membuat base-class (kelas dasar) bernama "Animal"
-    public://Mengatur agar dapat diakses secara keseluruhan (terbuka)
-    int age; //Mendeklarasikan variabel tipe integer
-    string name, origin, movement; //Mendeklarasikan variabel-variabel tipe string
+class Animal { 
+    public:
+    int age;
+    string name, origin, movement;
     void set_value(string x, int y, string z, string aa){ 
-    //Menggunakan variabel-variabel di dalam "(" dan ")" agar nilai variabel (x,y, z, dan aa) dapat dideklarasikan di fungsi main
-        name = x; //mengubah nilai variabel "name" menjadi sama dengan "x"
-        age = y; //mengubah nilai variabel "age" menjadi sama dengan "y"
-        origin =z; //mengubah nilai variabel "origin" menjadi sama dengan "z"
-        movement=aa; //mengubah nilai variabel "movement" menjadi sama dengan "aa"
+        name = x; 
+        age = y; 
+        origin =z; 
+        movement=aa; 
     }
 };
 
-class Zebra: public Animal { //Membuat sub-kelas "Zebra" dari "kelas Animal"
+class Zebra: public Animal { 
     public:
-    void zeb(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+    void zeb(){ 
         cout << name << " the zebra is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
     }
-    //Mencetak kalimat dan variabel di kanan perintah "cout"
+    
 };
 
-class Dolphin: public Animal { //Membuat sub-kelas "Dolphin" dari "kelas Animal"
+class Dolphin: public Animal { 
     public:
-    void dolphin(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+    void dolphin(){ 
         cout << name << " the dolphin is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
     }
-    //Mencetak kalimat dan variabel di kanan perintah "cout"
+    
 };
 
 int main (){
-    string na1 , na2; //Mendeklarasikan data dengan tipe string untuk nama dari hewan
-    string or1 , or2 ;  //Mendeklarasikan data dengan tipe string untuk asal hewan (native)
-    string m1 , m2 ; //Mendeklarasikan data dengan tipe string untuk menerangkan cara hewan bergerak
-    int o1,o2; ////Mendeklarasikan data dengan tipe integer untuk menerangkan umur hewan
-    cin >> na1 >> o1 >> or1 >> m1; //Penginputan data secara berurutan na1, o1, or1, m1
-    cin >> na2 >> o2 >> or2 >> m2; //Penginputan data secara berurutan na2, o2, or2, m2
-    Zebra a; //Pendeklarasian kelas "Zebra" dengan objek "a"
-    Dolphin b; //Pendeklarasian kelas "Dolphin" dengan objek "b"
-    a.set_value(na1, o1, or1, m1); 
-    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na1, o1, or1, m1) untuk zebra
-    b.set_value(na2, o2, or2, m2);
-    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na2, o2, or2, m2) untuk lumba-lumba
-    a.zeb(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void zeb()"
+    string na1 = "Lala", na2 = "Lili"; 
+    string or1 = "Africa", or2 = "worldwide";  
+    string m1 = "walking", m2 = "swimming"; 
+    Zebra a;
+    Dolphin b; 
+    a.set_value(na1, 20, or1, m1); 
+    b.set_value(na2, 30, or2, m2);
+    a.zeb(); 
     cout << "\n";
-    b.dolphin(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void dolphin()"
+    b.dolphin();
     return 0;
-}
-    
+}  
 ```
 **Output**
 (Sesuai dengan input)
