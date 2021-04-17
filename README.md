@@ -315,7 +315,8 @@ geeksquiz, geeksforgeeks)
 Pada soal ini, fungsi `swap` menggunakan metode passing _pass by value_ sehingga nilai `x` dan `y` tidak tertukar.
 ###
 # OOP
-##Soal 1
+
+## Soal 1
 ```
 #include<bits/stdc++.h>
 using namespace std;
@@ -361,7 +362,7 @@ int main (){
 50
 18
 ```
-##Soal 2
+## Soal 2
 ```
 #include<bits/stdc++.h>
 using namespace std;
