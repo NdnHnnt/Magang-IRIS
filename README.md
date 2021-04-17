@@ -225,7 +225,7 @@ int arr[5] = {1,2,3,4,5,6}
 
 balik();
 ```
-3. Cari soal tentang penerapan pointer dan kerjakan !
+3. Cari soal tentang penerapan pointer dan kerjakan ! <br>
 https://www.geeksforgeeks.org/c-language-2-gq/pointers-gq/ (No. 15)
 ## Jawaban
 1. Menukar nilai pada variabel `a` dan `b`
@@ -326,8 +326,8 @@ class Shape{ //Membuat base-class (kelas dasar) bernama "Shape"
     int width, height; //Mendeklarasikan variabel width dan height
     void numbers(int x, int y) { 
     //Menggunakan int x dan int y di dalam "(" dan ")" agar nilai sisi bangunan (x dan y) dapat dideklarasikan di fungsi main
-        width=x; //mengubah nilai variabel "x" menjadi sama dengan "width"
-        height=y; ////mengubah nilai variabel "y" menjadi sama dengan "height"
+        width=x; //mengubah nilai variabel "width" menjadi sama dengan nilai "x"
+        height=y; ////mengubah nilai variabel "height" menjadi sama dengan "y"
     }
 };
 
@@ -339,7 +339,7 @@ class Rectangle: public Shape{ //Membuat sub-kelas "Rectangle" dari "kelas Shape
 
 };
 
-class Triangle: public Shape { ////Membuat sub-kelas "Rectangle" dari "kelas Shape"
+class Triangle: public Shape { //Membuat sub-kelas "Rectangle" dari "kelas Shape"
     public:
     float area () { //Menghitung luas segitiga di dalam fungsi "area"
         return width*height/2; //Mengembalikan nilai dari luas segitiga
