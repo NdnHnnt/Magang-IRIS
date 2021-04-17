@@ -447,3 +447,61 @@ Lala the zebra is 20 years old, from Africa. It moves by walking
 Lili the dolphin is 30 years old, from worldwide. It moves by swimming
 
 ```
+
+## Soal 3(2)
+
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+class Animal { //Membuat base-class (kelas dasar) bernama "Animal"
+    public://Mengatur agar dapat diakses secara keseluruhan (terbuka)
+    int age; //Mendeklarasikan variabel tipe integer
+    string name, origin, movement; //Mendeklarasikan variabel-variabel tipe string
+    void set_value(string x, int y, string z, string aa){ 
+    //Menggunakan variabel-variabel di dalam "(" dan ")" agar nilai variabel (x,y, z, dan aa) dapat dideklarasikan di fungsi main
+        name = x; //mengubah nilai variabel "name" menjadi sama dengan "x"
+        age = y; //mengubah nilai variabel "age" menjadi sama dengan "y"
+        origin =z; //mengubah nilai variabel "origin" menjadi sama dengan "z"
+        movement=aa; //mengubah nilai variabel "movement" menjadi sama dengan "aa"
+    }
+};
+
+class Zebra: public Animal { //Membuat sub-kelas "Zebra" dari "kelas Animal"
+    public:
+    void zeb(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+        cout << name << " the zebra is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
+    }
+    //Mencetak kalimat dan variabel di kanan perintah "cout"
+};
+
+class Dolphin: public Animal { //Membuat sub-kelas "Dolphin" dari "kelas Animal"
+    public:
+    void dolphin(){ //Berisi perintah untuk menjalankan rangkaian kode yang ada di dalam void
+        cout << name << " the dolphin is " << age << " years old, from " <<  origin <<". It moves by " << movement << endl;
+    }
+    //Mencetak kalimat dan variabel di kanan perintah "cout"
+};
+
+int main (){
+    string na1 , na2; //Mendeklarasikan data dengan tipe string untuk nama dari hewan
+    string or1 , or2 ;  //Mendeklarasikan data dengan tipe string untuk asal hewan (native)
+    string m1 , m2 ; //Mendeklarasikan data dengan tipe string untuk menerangkan cara hewan bergerak
+    int o1,o2; ////Mendeklarasikan data dengan tipe integer untuk menerangkan umur hewan
+    cin >> na1 >> o1 >> or1 >> m1; //Penginputan data secara berurutan na1, o1, or1, m1
+    cin >> na2 >> o2 >> or2 >> m2; //Penginputan data secara berurutan na2, o2, or2, m2
+    Zebra a; //Pendeklarasian kelas "Zebra" dengan objek "a"
+    Dolphin b; //Pendeklarasian kelas "Dolphin" dengan objek "b"
+    a.set_value(na1, o1, or1, m1); 
+    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na1, o1, or1, m1) untuk zebra
+    b.set_value(na2, o2, or2, m2);
+    //Mendeklarasi nilai (string x, int y, string z, string aa) di kelas Animal setara dengan (na2, o2, or2, m2) untuk lumba-lumba
+    a.zeb(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void zeb()"
+    cout << "\n";
+    b.dolphin(); //Menjalankan perintah dari kelas "Zebra" yang berada dalam "void dolphin()"
+    return 0;
+}
+    
+```
+**Output**
+(Sesuai dengan input)
