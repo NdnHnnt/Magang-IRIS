@@ -226,7 +226,7 @@ int arr[5] = {1,2,3,4,5,6}
 balik();
 ```
 3. Cari soal tentang penerapan pointer dan kerjakan ! <br>
-https://www.geeksforgeeks.org/c-language-2-gq/pointers-gq/ (No. 15)
+[Sumber soal, nomor 15](https://www.geeksforgeeks.org/c-language-2-gq/pointers-gq)
 ## Jawaban
 1. Menukar nilai pada variabel `a` dan `b`
 ```
