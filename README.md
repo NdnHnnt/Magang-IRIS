@@ -440,10 +440,8 @@ int main (){
 ```
 **Output**
 ```
-Lala the zebra is 20 years old, from Africa. It moves by walking
-
-Lili the dolphin is 30 years old, from worldwide. It moves by swimming
-
+**Output**
+(Sesuai dengan input)
 ```
 
 ## Soal 3(2)
@@ -495,4 +493,9 @@ int main (){
 }  
 ```
 **Output**
-(Sesuai dengan input)
+```
+Lala the zebra is 20 years old, from Africa. It moves by walking
+
+Lili the dolphin is 30 years old, from worldwide. It moves by swimming
+
+```
