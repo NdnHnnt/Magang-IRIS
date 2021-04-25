@@ -440,7 +440,6 @@ int main (){
 ```
 **Output**
 ```
-**Output**
 (Sesuai dengan input)
 ```
 
